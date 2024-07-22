@@ -1,0 +1,15 @@
+
+server {
+
+    listen 80;
+    http2 on;
+
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log ${LOG_LEVEL};
+    
+    location / {
+        root /www/;
+    }
+
+}
+

@@ -1,10 +1,12 @@
 # syntax=docker/dockerfile:1
 
-FROM nginx 
+FROM nginx
 
 COPY ./conf/ /etc/nginx/templates/
-COPY ./www/ /www/ 
+COPY ./www/ /www/
 
 ENV LOG_LEVEL=notice
 
 EXPOSE 80
+
+HEALTHCHECK CMD curl -f http://localhost/ || exit 1

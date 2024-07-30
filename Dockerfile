@@ -9,4 +9,7 @@ ENV LOG_LEVEL=notice
 
 EXPOSE 80
 
-HEALTHCHECK CMD curl -f http://localhost/ || exit 1
+HEALTHCHECK  --interval=15m \
+    --start-interval=30s \
+    --start-period=30s \
+    CMD curl -f http://localhost/ || exit 1

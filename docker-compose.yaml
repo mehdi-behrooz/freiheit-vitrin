@@ -1,0 +1,11 @@
+services:
+
+
+  vitrin-test:
+    build: .
+    container_name: vitrin-test
+    ports:
+      - 8000:80
+    environment:
+      - TITLE="Help!"
+

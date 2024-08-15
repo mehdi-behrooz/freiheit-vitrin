@@ -16,6 +16,9 @@ ENV TITLE="Oops!"
 ENV HEADING="Under Maintenance"
 ENV MESSAGE="We will be back soon."
 
+ENV DOWNLOAD_URL=/download/
+ENV AUTO_INDEX=off
+
 EXPOSE 80
 
 HEALTHCHECK  --interval=15m \

@@ -15,5 +15,10 @@ server {
         root /www/;
     }
 
+    location ${DOWNLOAD_URL} {
+        alias /download/;
+        autoindex ${AUTOINDEX};
+    }
+
 }
 

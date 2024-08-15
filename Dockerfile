@@ -16,8 +16,8 @@ ENV TITLE="Oops!"
 ENV HEADING="Under Maintenance"
 ENV MESSAGE="We will be back soon."
 
-ENV DOWNLOAD_URL=/download/
-ENV AUTO_INDEX=off
+ENV DOWNLOAD_PATH=/download/
+ENV AUTOINDEX=off
 
 EXPOSE 80
 

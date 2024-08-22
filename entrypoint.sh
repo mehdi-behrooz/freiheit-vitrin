@@ -1,5 +1,5 @@
 #!/bin/sh
 
-envsubst < www/index.html | sponge www/index.html
+envsubst <www/index.html | sponge www/index.html
 
-exec $@
+exec "$@"

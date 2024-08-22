@@ -1,10 +1,12 @@
 # syntax=docker/dockerfile:1
+# checkov:skip=CKV_DOCKER_3: nginx wants to be run as root
 
-FROM nginx:1.27.0-alpine
+FROM nginx:1.27-alpine
 
-RUN apk update
-RUN apk add gettext        # for: envsubst
-RUN apk add moreutils      # for: sponge
+# gettext for: envsubst
+# moreutils for sponge
+RUN apk update \
+    && apk add gettext moreutils
 
 COPY ./conf/ /etc/nginx/templates/
 COPY ./www/ /www/

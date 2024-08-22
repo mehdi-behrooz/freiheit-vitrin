@@ -1,6 +1,4 @@
 services:
-
-
   vitrin-test:
     build: .
     container_name: vitrin-test
@@ -12,4 +10,3 @@ services:
       - DOWNLOAD_PATH=/a/b/c/d/
     volumes:
       - /var/www/html/test/:/download/
-

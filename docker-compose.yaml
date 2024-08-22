@@ -9,7 +9,7 @@ services:
     environment:
       - TITLE="Help!"
       - AUTOINDEX=on
-      - URL=/a/b/c/d/
+      - DOWNLOAD_PATH=/a/b/c/d/
     volumes:
       - /var/www/html/test/:/download/
 

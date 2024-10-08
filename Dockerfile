@@ -12,6 +12,7 @@ COPY ./www/ /www/
 COPY --chmod=755 ./entrypoint.sh /docker-entrypoint.d/
 
 ENV LOG_LEVEL=notice
+ENV NGINX_ENTRYPOINT_QUIET_LOGS=true
 
 ENV TITLE="Oops!"
 ENV HEADING="Under Maintenance"

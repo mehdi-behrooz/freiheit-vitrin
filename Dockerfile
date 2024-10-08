@@ -23,6 +23,6 @@ ENV AUTOINDEX=off
 EXPOSE 80
 
 HEALTHCHECK  --interval=15m \
-    --start-interval=30s \
-    --start-period=30s \
+    --start-period=1m \
+    --start-interval=10s \
     CMD curl -fs http://localhost/ > /dev/null || exit 1

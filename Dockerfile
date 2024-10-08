@@ -3,10 +3,9 @@
 
 FROM nginx:1.27-alpine
 
-# gettext for: envsubst
 # moreutils for sponge
 RUN apk update \
-    && apk add gettext moreutils
+    && apk add gettext-envsubst moreutils
 
 COPY ./conf/ /etc/nginx/templates/
 COPY ./www/ /www/

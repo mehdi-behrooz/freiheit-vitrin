@@ -2,4 +2,3 @@
 
 envsubst <www/index.html | sponge www/index.html
 
-exec "$@"
